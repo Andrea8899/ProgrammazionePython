@@ -1,6 +1,1 @@
-print("hello world")
-print("hello world")
-print("heyla")
-print("what is your name?")
-name = input("Write your name: ")
-print(f"Cool, hello {name}")
+print("Hello, World!")
