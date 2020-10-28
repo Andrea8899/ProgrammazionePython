@@ -1,0 +1,20 @@
+# qui andranno le idee :)
+# APPLICAZIONE DI PROGRAMMAZIONE
+
+"""in questa applicazione verranno
+date alcune informazioni sui diversi 
+linguaggi di programmazione"""
+
+# pagina iniziale
+   # logo 
+   # caricamento 
+     
+# pagina delle credenziali
+
+
+-database:
+    -table:
+        -attributi:
+            es:
+                nome: "Carlo"
+                cognome: "D'Amico"
