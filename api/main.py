@@ -13,9 +13,7 @@ class Render_template:
     def renderhtml(self):
         with open(f"templates/{self.template}", "r") as index:
             return str(index.read())
-    def renderjson(self):
-        with open(f"templates/{self.template}", "r") as index:
-            return json.dumps(str(index.read()))
+
 
 @app.get("/", response_class=HTMLResponse)
 async def root():
@@ -23,11 +21,11 @@ async def root():
     req = requests.get("http://localhost:6000/api")
     json_dict = json.dumps(req.json())
     resp = json_dict["nome-file"]
-    return (f"<h1>{resp}</h1>")
+    return index.renderhtml()
 
 @app.get("/api")
 async def api():    
-    return {"nome-file": "json"}
+    return "ciao"
 
 
 if __name__ == "__main__":

@@ -1,7 +1,0 @@
-.vscode/launch.json
-api/deploy/.deta/prog_info
-api/deploy/.deta/state
-api/deploy/temp/main.py
-api/deploy/temp/.deta/prog_info
-api/deploy/temp/requirements.txt
-api/deploy/temp/.deta/state
