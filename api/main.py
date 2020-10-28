@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 import os
 import json
+import uvicorn
+import requests
 
 app = FastAPI()
 
@@ -18,12 +20,15 @@ class Render_template:
 @app.get("/", response_class=HTMLResponse)
 async def root():
     index = Render_template("index.html")
-    return index.renderhtml()
+    req = requests.get("http://localhost:6000/api")
+    json_dict = json.dumps(req.json())
+    resp = json_dict["nome-file"]
+    return (f"<h1>{resp}</h1>")
 
 @app.get("/api")
-async def root():    
-    return {"Hello World!": "ciao"}
+async def api():    
+    return {"nome-file": "json"}
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="localhost", port=5000, reload=True)
+    uvicorn.run("main:app", host="localhost", port=6000, reload=True)
