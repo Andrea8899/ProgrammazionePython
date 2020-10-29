@@ -1,0 +1,11 @@
+.titolo{
+    color: black;
+    border-radius: 500px;
+    border-color: blanchedalmond;
+    border-width: 1cm;
+    background-color: rgb(0, 255, 0);
+}
+#sottotitolo {
+    color: green;
+    background-color: white;
+}
